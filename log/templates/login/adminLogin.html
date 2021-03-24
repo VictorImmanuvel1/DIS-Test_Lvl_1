@@ -1,0 +1,49 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="{%static 'style/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/bootstrap.css'%}">
+    <script src="{% static 'style/bootstrap.bundle.min'%}"></script>
+</head>
+<body>
+   <section>
+    <div class="header">
+      <div class="logo">
+        <a href="index.html"><img src="{% static 'images/logo2.png' %}"></a>
+      </div>
+
+      <div class="headerCont">
+        <b>DEPARTMENT INFORMATION SYSTEM</b>
+      </div>
+    </div>
+   </section>
+
+   <section class="loginContainer">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              
+                  <form class="box" action="">
+
+                      <h1>Admin Login</h1>
+
+                      <div class="content-selection">
+
+
+                        <input type="text" name="" placeholder="Username"> 
+                        <input type="password" name="" placeholder="Password"> 
+                        <a class="forgot text-muted" href="#">Forgot password?</a> 
+                        <input type="submit" name="" value="Login" href="{%url 'adminHome'%}">
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+   </section>
+
+
+</body>
+</html>

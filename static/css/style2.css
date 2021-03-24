@@ -1,0 +1,85 @@
+.header
+{
+position: absolute;
+width: 100%;
+height: 12%;
+background:#0000007c;
+padding-bottom:120px;
+}
+
+/* ----- LOGOS ----- */
+.logo
+{
+position: absolute;
+left: 10%;
+}
+.logo img{
+padding-top: 4px;
+width: 60px;
+}
+.headerCont{
+text-align: center;
+margin-top: 12px;
+font-size: 36px;
+text-transform: uppercase;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* Home */
+
+.boxHome{
+    padding-top: 7%;
+}
+
+.boxPart{
+	background: rgba(171, 171, 171, 0.34);
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+.textHome{
+    margin:20px 0px;
+}
+
+.fa{
+     color:#fff;
+     font-size: 50px;
+     padding-bottom: 10px;
+}
+
+.btnAll-outline-info{
+	color: #4283d7;
+}
+
+.titleHome {
+	padding-bottom:20px;
+}
+
+.row button{
+    color: #fff;
+    border-color :#5d32d1;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .headerCont{
+        padding-top: 50px;
+        font-size: 26px;
+    }
+    .logo{
+         position: absolute;
+        left:40%;
+    }
+    .header{
+        height: 20%;
+    }  
+    .boxHome{
+        padding-top: 30%;
+    }
+
+}
+.reg-button{
+text-color:#fff;
+
+}

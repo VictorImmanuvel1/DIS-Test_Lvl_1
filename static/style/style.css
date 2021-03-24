@@ -1,0 +1,145 @@
+body
+{
+background-image: url("../images/bg1.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+}
+.header
+{
+position: absolute;
+width: 100%;
+height: 12%;
+background:#0000007c;
+padding-bottom:90px;
+}
+
+/* ----- LOGOS ----- */
+.logo
+{
+position: absolute;
+left: 10%;
+}
+.logo img{
+padding-top: 4px;
+width: 70px;
+}
+.headerCont{
+text-align: center;
+margin-top: 12px;
+font-size: 36px;
+text-transform: uppercase;
+color: #FFFFFF;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ----- Login box ----- */
+.box {
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    background: #0000008f;
+    text-align: center;
+    transition: 0.25s;
+    border-radius: 20px;
+}
+
+.box input[type="text"],
+.box input[type="password"] 
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    width: 250px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s
+}
+
+.box h1 {
+    color: white;
+    font-weight: 500
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+    width: 255px;
+    border-color: #2ecc71
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer
+}
+
+.box input[type="submit"]:hover {
+    background: #2ecc71
+}
+
+.forgot {
+    text-decoration: underline
+}
+
+   /* Dropdown */
+.loginDrop{
+    width: 50%;
+    height: 30px;
+    background-color: transparent; 
+    color: white; 
+    border-radius: 5px;
+}
+.loginDrop option{
+    background: black;
+}
+
+  /* --------- RESPONSIVE ------------ */
+
+  /* ----- Home ----- */
+  @media only screen and (max-width: 768px) {
+    .box{
+        top: 25%;
+        left: 10%;
+        width: 400px;
+    }
+    .headerCont{
+        padding-top: 70px;
+        font-size: 26px;
+    }
+    .logo{
+         position: absolute;
+        left:40%;
+    }
+    .header{
+        height: 20%;
+    }  
+      .boxStudent {
+        position: absolute;
+        top: 30%;
+        background: #0000008f;
+        text-align: center;
+        transition: 0.25s;
+        border-radius: 20px;
+    }
+}

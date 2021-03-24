@@ -1,0 +1,29 @@
+<html>
+<head>
+    <body>
+
+<label>fname:</label>{{user.fname}}<br>
+<label>lname:</label>{{user.lname}}<br>
+<label>uname:</label>{{user.uname}}<br>
+<label>psd:</label>{{user.psd}}<br>
+<table>
+    <tr>
+    <th>MARK1</th>
+    <th>MARK2</th>
+    <th>MARK3</th>
+    </tr>
+    {% for i in mark %}
+    <tr>
+        <td>{{i.m1}}</td>
+        <td>{{i.m2}}</td>
+        <td>{{i.m3}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<button type="button" class="btn btn-outline-info" onclick="window.location.href='{% url 'updatepage' user.id%}';">update</button>
+<button type="button" class="btn btn-outline-info" onclick="window.location.href='{% url 'updatemark' user.id%}';">updatemark</button>
+<button type="button" class="btn btn-outline-info" onclick="window.location.href='{% url 'deleteuser' user.id%}';">delete</button>
+</body>
+</head>
+</html>

@@ -1,0 +1,93 @@
+<HTML>
+<head>
+<title>Work stuff</title>
+<script language="javascript">
+row_no=0;
+function addRow(tbl,row){
+
+//row count
+row_no++;
+
+var tick = String(row_no);
+
+if (row_no<20){
+
+//Declaring text boxes
+
+var textbox  ='<input type="text" size = "30"  maxlength= "30"  id=com'+tick+'>';
+var textbox2 = '<input type="text" size = "30" maxlength= "30"  id=pos'+tick+'>';
+var textbox3 = '<input type="text" size = "5" maxlength= "5"  id=frm'+tick+'>';
+
+//delete button
+var stop = '<input type="button" value="delete" onclick="deleteRow(this)" >';
+
+//Inserting textboxes into table cells
+
+var tbl = document.getElementById(tbl);
+var rowIndex = document.getElementById(row).value;
+var newRow = tbl.insertRow(row_no);
+var newCell = newRow.insertCell(0);
+newCell.innerHTML = textbox;
+var newCell = newRow.insertCell(1);
+newCell.innerHTML = textbox2;
+var newCell = newRow.insertCell(2);
+newCell.innerHTML = textbox3;
+
+//delete button within cell
+var newCell = newRow.insertCell(3);
+newCell.innerHTML = stop;
+}
+
+}
+//Delete Function
+function deleteRow(r)
+{
+var i=r.parentNode.parentNode.rowIndex;
+document.getElementById('TableMain').deleteRow(i);
+}
+
+</script>
+</head>
+<body>
+<h3>So . . . Where have you worked</h3>
+
+<!--table just for layout sake-->
+<table width="100%" >
+<tr>
+<td width = 80%>
+
+<!--Form-->
+<form name="invoice" method="POST">
+    {%csrf_token%}
+
+<b>Professional Experience</b>
+</br>
+</br>
+
+<!--Main table-->
+<table width="100%" border="0" cellspacing="0" cellpadding="2" id="TableMain">
+
+<!--Headers-->
+<th><center>Mark1</th>
+<th>Mark2</th>
+<th>Mark3</th>
+
+<tr id="row1">
+</tr>
+</table>
+
+</form></td>
+<td valign="top" width = 20%>
+
+<!--Add more button-->
+</br></br></br><input type="button" name="Button" value="Add more" onClick="addRow('TableMain','row1')"></td>
+</tr>
+    </table>
+<button type="submit" class="btn btn-primary btn-block" onclick="myFunction()" >submit</button>
+<script>
+             function myFunction() {
+                     alert("Registered Successfully");
+}
+</script>
+</body>
+</html>
